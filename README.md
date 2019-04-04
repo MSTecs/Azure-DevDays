@@ -1,2 +1,2 @@
-# Azure-DevDays
-Dev Days 2019 labs
+# Azure-Developer Camp
+Developer Camp Lab Guides
