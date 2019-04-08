@@ -54,6 +54,7 @@
 ![](images/7.png)
 <br>
 2. Write the next command to obtain the credentials to your Kubernetes cluster, replace the XXXXX on the resource group to match the with the number generated for your lab, and replace the myAKSCluster with the name you specified on the past task.
+
 ```
 az aks get-credentials --resource-group Module-03-XXXXX --name myAKSCluster
 ```
