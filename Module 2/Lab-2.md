@@ -1,19 +1,19 @@
 # LAB GUIDE
 ## Lab: Implementing Containers on Azure VMs.
 
-### Pre-requisites
+## Pre-requisites
 * Microsoft Azure Account: You'll need a valid and active Azure account for the Azure labs.
 
 
 ## Length
 30 minutes
 
-### Before you begin
+## Before you begin
 1. Enter in the following link <a href="http://portal.azure.com,">Portal Azure</a> and follow the next instructions
 
 ## Exercise 1: Implementing Docker hosts on Azure VMS
 
-###Task 1: Connect to Azure Cloud Shell
+##Task 1: Connect to Azure Cloud Shell
 1. In the Azure portal click the Cloud Shell icon.
 
 ![](images/csicon.png)
@@ -35,9 +35,9 @@
 
 ![](images/m203.png)
 
-5. Wait for the deployment to complete.
+5. Wait for the deployment to be completed.
    
-###Task 2: Create a new azure VM running Docker
+##Task 2: Create a new azure VM running Docker
 1. In the azure portal, from the cloud shell, Deploy a template that will create a new Azure VM hosting Docker by typing the following command and pressing Enter, change the XXXXXX on the resource group to match with the number obtained from the lab environment, which will be on your credentials between odl_user_ and @:
 ```
 az group deployment create --resource-group Module-02-XXXXX --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/docker-simple-on-ubuntu/azuredeploy.json
@@ -48,10 +48,10 @@ az group deployment create --resource-group Module-02-XXXXX --template-uri https
     + adminPassword: Pa55word234234
     + dnsNameForPublicIP: any valid, unique name consisting of lowercase letters and digits
 ```
-3. Wait for the deployment to complete.
+3. Wait for the deployment to be completed.
 
 ## Exercise 2: Deploying containers to Azure VMs
-###Task 1: Connect to an Azure VM running Docker
+##Task 1: Connect to an Azure VM running Docker
 1. In the Azure portal, in the Cloud Shell pane, identify the fully qualified domain name, again, please change the XXXXXX with the number generated for your lab.
 ```
 FQDN=$(az vm show --resource-group Module-02-XXXXX --name myDockerVM --show-details --query [fqdns] --output tsv)
@@ -72,13 +72,13 @@ ssh student@$FQDN
 
 
 
-###Task 2: Deploy a container to a Docker host running on an Azure VM
+##Task 2: Deploy a container to a Docker host running on an Azure VM
 1. From the Cloud shell pane, within the SSH session to the Azure VM running Docker enter this command: 
  
 ```
 docker run -d -p 80:80 --restart=always nginx
 ```
-> **Note**: —restart flag equal always value (always restart the container if it stops)
+> **Note**: To configure the restart policy for a container, use the --restart flag when using the docker run command. The value always, Always restart the container if it stops.
 
 ![](images/m206.png)
 
@@ -98,7 +98,7 @@ Once you completed this exercise, you have successfully run a sample containeriz
 ## Exercise 3: Deploying multicontainer applications to Azure VMs with Docker Compose
 
 
-###Task 1: Create a compose file
+##Task 1: Create a compose file
 1. From the Cloud shell pane, within the SSH session to the Azure VM running Docker create a docker-compose.yml file by typing the following and then pressing Enter:  
 ```
 nano docker-compose.yml
@@ -125,7 +125,7 @@ Note: Be careful when typing the text above. Make sure you include the spaces to
 3. Once you typed in the text, press the Ctrl+O key combination and then press Enter.
 4. Next, press the Ctrl+X key combination to exit the nano editor.
 
-###Task 2: Deploy the containers with docker-compose to an Azure VM
+##Task 2: Deploy the containers with docker-compose to an Azure VM
 1. From the Cloud shell pane, within the SSH session to the Azure VM running Docker, to deploy multi-container application defined on the previous task, type the following command:
 
 ```
@@ -147,4 +147,4 @@ Note: Be careful when typing the text above. Make sure you include the spaces to
 
 4. Type exit to terminate the SSH session and then close the Cloud Shell pane.
 
-Result: Once you completed this exercise, you have successfully implemented a multi-container application by using Docker Compose.
+Result: Once you have completed this exercise, you have successfully implemented a multi-container application by using Docker Compose.
