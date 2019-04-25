@@ -1,4 +1,4 @@
-# LAB GUIDE
+﻿﻿# LAB GUIDE
 ## Lab: App Modernization
 
 ### Pre-requisites
@@ -11,7 +11,7 @@
 ## Exercise 1: Migrate the database to Azure SQL Database
 
 
-###Task 1: Provision a SQL Server
+## Task 1: Provision a SQL Server
 In this task, you will create a SQL Server (logical server). You will not create the databases at this time since it will be created during the database migration step
 
 1. In a web browser, navigate to the Azure portal http://portal.azure.com and sign in with the credentials provided.
@@ -31,7 +31,7 @@ In this task, you will create a SQL Server (logical server). You will not create
 
 5. Select Create.
 
-###Task 2: Configure SQL Server firewall
+## Task 2: Configure SQL Server firewall
 In this task, you will create a firewall rule to allow access to your SQL Server
 
 1. After the SQL Server finishes provisioning, navigate to it by select Resource groups from the left-hand menu in the Azure portal, then click on module-01-XXXXX resource group from the list.
@@ -52,8 +52,8 @@ In this task, you will create a firewall rule to allow access to your SQL Server
 
 5. On the Success dialog box, select OK
 
-###Task 3: Migrate the on-premises SQL database to Azure
-In this task, you will migrate the AdventureWorks database from on-premises (Lab VM) into Azure SQL Database
+##Task 3: Migrate the on-premises SQL database to Azure
+In this task, you are going to create the AdventureTest database and migrate it from on-premises (Lab VM) into Azure SQL Database
 
 1. On Azure Portal, From the Left menu, go to Virtual Machines.
  
@@ -71,9 +71,8 @@ In this task, you will migrate the AdventureWorks database from on-premises (Lab
    
 ![](images/13.png)
 
-6. Go to your downloads folder and double click on MySQLVM.rdp File, click on Connect, enter student as the user name and Pa55w.rd1234 as Password, and click on Accept. And then click on Yes.
-   
-7. Click on Star and type Management, from the results click on SQL Management Studio 17,and then click connect.
+6. Go to your downloads folder and double click on MySQLVM.rdp File, click on Connect, enter student as the user name and Pa55w.rd1234 as Password, and click on Accept. Then click on Yes.
+7. Click on Start Button and type Management, from the results click on SQL Management Studio 17,and then click connect.
 8. Click on New Query
 
 ![](images/newquery.png)
@@ -105,7 +104,7 @@ GO
 
 10. At object explorer, expand Databases and click on refresh until the AdventureTest Database appears
 
-11. Right-click the AdventureTest database and select Tasks Deploy Database to Microsoft Azure SQL Database.
+11. Right-click the AdventureTest database, select Tasks and then Deploy Database to Microsoft Azure SQL Database.
 
 ![](images/31.png)
 
@@ -119,8 +118,8 @@ GO
 ![](images/33.png)
 
 15. Next, set Authentication to SQL Server Authentication and enter the following credentials:
-   a. Login: demouser
-   b. Password: Password.1!!
+   - a. Login: demouser
+   - b. Password: Password.1!!
 16. Check Remember password.
 17. Select Connect.
    
@@ -133,14 +132,14 @@ GO
 ![](images/35.png)
 
 20. When the operation has completed, close the database deployment dialog. You should see green checkmarks next to each completed step, along with a large checkmark next to Operation Complete.
-21. You can verify that the database is operational, and its tables populated by connecting to it through SSMS, using the same credentials used in Step 15 above.
+21. You can verify that the database is operational, and its tables populated by connecting to it through SSMS (SQL Server Management Studio), using the same credentials used in Step 15 above.
 
 
 ## Exercise 2: Provision App Services
-### Task 1: Create a Web App
+## Task 1: Create a Web App
 In this task, you will provision a Web App and API App in Azure.
 
-1. In the Azure portal http://portal.azure.com, create a new Web App by selecting +Create a resource, enter "web app" in the Marketplace search box, and selecting the Web App item in the results.
+1. In the Azure portal http://portal.azure.com, create a new Web App by selecting +Create a resource, type "web app" in the Marketplace search box, hit enter, and select the Web App item in the results.
    
 ![](images/36.png)
 
@@ -170,8 +169,8 @@ In this task, you will provision a Web App and API App in Azure.
 4. Select OK.
 5. Select Create to provision the new Web App.
 
-### Task 2: Provision an API App
-1. In the Azure portal http://portal.azure.com, select +Create a resource, enter "api app" in the Marketplace Search box, and select API App from the results.
+## Task 2: Provision an API App
+1. In the Azure portal http://portal.azure.com, select +Create a resource, enter "api app" in the Marketplace Search box, hit enter, and select API App from the results.
    
 ![](images/41.png)
 
@@ -188,7 +187,7 @@ In this task, you will provision a Web App and API App in Azure.
 
 ## Exercise 3: Connect your App with the Azure SQL Database
 
-### Task 1: Get the connection String
+## Task 1: Get the connection String
 
 1. On the azure portal, from the left menu, click on SQL databases
 2. Select the AdventureTest Database you just migrated.
@@ -200,7 +199,7 @@ In this task, you will provision a Web App and API App in Azure.
 
 ![](images/ado.png) 
 
-### Task 2: Add the connection string to your Web App
+## Task 2: Add the connection string to your Web App
 
 1.- On the Azure Portal from the left menu, click on App Services, and then click on the App you just created on Exercise 2
 
@@ -210,7 +209,7 @@ In this task, you will provision a Web App and API App in Azure.
 
 ![](images/appsettings.png)
 
-3.- On Connection String Name Type democs, on Value paste the connection string that you obtained on the past task, change the values from username and password with demouser and Password.1!!, Ensure that SQLAzure is selected on Type dropdown text, and the click on Save at the top of the workspace
+3.- On Connection String Name Type democs, on Value paste the connection string that you obtained on the past task, change the values from username and password with demouser and Password.1!!, Ensure that SQLAzure is selected on Type dropdown text, then click on Save at the top of the workspace
 
 ![](images/appcs.png)
 
@@ -218,9 +217,9 @@ In this task, you will provision a Web App and API App in Azure.
 
 ## Exercise 4: Identity and security
 
-### Task 1: Protect your WebApp with Azure Identity.
+## Task 1: Protect your WebApp with Azure Identity.
 
-1. In the Azure portal, navigate to your Web App you created on the Exercise 3 (Select, App Services in the left menu, and then your app). In the left navigation, select Authentication / Authorization
+1. In the Azure portal, navigate to the Web App you created on the Exercise 3 (Select, App Services in the left menu, and then your app). Under settings, select Authentication / Authorization
    
 ![](images/48.png)
 
