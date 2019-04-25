@@ -1,36 +1,36 @@
 # LAB GUIDE
 ## Lab: Deploy an Azure Kubernetes Service (AKS) cluster using the Azure portal
-### Learning Objectives
+## Learning Objectives
 	- How to deploy an AKS cluster using the Azure portal.
 
-### Pre-requisites
+## Pre-requisites
 * Microsoft Azure Account: You'll need a valid and active Azure account for the Azure labs.
 
 ## Length
 50 minutes
 
 # Before you begin
-1. Sign in <a href="https://portal.azure.com">Portal Azure</a> and follow the instructions
+1. Sign in into the <a href="https://portal.azure.com">Azure Portal</a> and follow the instructions
 
 ![](images/begin.png)
 
 
 ## Exercise 1: Create an AKS Cluster
-1. First click on **Create a resource** then click on **Kubernetes Service** button to initiate the configuration
+1. First, click on **Create a resource** then click on **Kubernetes Service** button to initiate the configuration
 
 ![](images/1.png)
 
 2. Set the next options in **PROJECT DETAILS** and **CLUSTER DETAILS** sections and then click on **Next: Authentication >**
 
-	- Subscription
+	- Subscription: Select the subscription you are using for this lab.
 	- Version: Select the default version
 	- Resource group: Select the Module-03-XXXXX resource group, where XXXXX is the number generated for this lab
-	- Kubernetes cluster name
-	- DNS name prefix
+	- Kubernetes cluster name: Enter a custer name, for example myAKScluster
+	- DNS name prefix: This field its filled automatically when typing the cluster name, if not, set a DNS name prefix, for example myAKScluster-dns
 
 ![](images/2.png)
 
-3. Click on **Configure service principal** then check the **Use Existing**, On Service principal client ID, enter the Application/Client ID obtained for this lab, and in the Service principal client secret, enter the Application Secret Key obtained for this lab, then click on **Ok**
+3. Click on **Configure service principal** then check the **Use Existing**, On Service principal client ID, enter the Application/Client ID obtained for this lab, and in the Service principal client secret, enter the Application Secret Key obtained for this lab, this both settings could be founded at the screen presented at the beginning of the labs, then click on **Ok**
 
 ![](images/service.png)
 
@@ -38,11 +38,11 @@
 
 ![](images/4.png)
 
-5. Go to Monitoring Tab and Set No for Enable container monitoring
+5. Go to Monitoring Tab and Set **No** for Enable container monitoring
 
 ![](images/monitor.png)
 
-6. click on **Review + create**, after Azure makes the review click on create
+6. click on **Review + create**, after Azure completes the review click on create
 
 ![](images/5.png)
 
@@ -50,10 +50,11 @@
 
 ![](images/6.png)
 
-###task 2: Connect to the cluster
-1. Click on the marked icon in red to open Cloud Shell
+##task 2: Connect to the cluster
+1. Click on the marked to open Cloud Shell
+   
 ![](images/7.png)
-<br>
+
 2. Write the next command to obtain the credentials to your Kubernetes cluster, replace the XXXXX on the resource group to match the with the number generated for your lab, and replace the myAKSCluster with the name you specified on the past task.
    
 ```
@@ -181,7 +182,7 @@ kubectl apply -f azure-vote.yaml
 
 ![](images/13.png)
 
-**note** When you finish this exercise your application will be deployed
+**note** When you complete this exercise your application will be deployed
 
 ## Exercise 3: Test the application
 1. Run the next command to monitor the progress
@@ -190,11 +191,11 @@ kubectl get service azure-vote-front --watch
 ```
 ![](images/14.png)
 
-**note** If **EXTERNAL-IP** is **pending** wait until changes to an actual **public IP**
+**note** If **EXTERNAL-IP** is **pending** wait until the value changes to an actual **public IP**
 
 2. When the **EXTERNAL-IP** address changes from pending to an actual public IP address, use ``CTRL+C`` to stop the **kubectl** watch process
    
-3. Enter in your browser and enter your external-IP and you'll see your service running
+3. Open a new tab on you browser, enter your external-IP, and you'll see your service running
 
 ![](images/15.png)
 **note** your application is now online
