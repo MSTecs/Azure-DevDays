@@ -13,11 +13,11 @@
 40 minutes
 
 ## Exercise 1: Create a new project in Azure DevOps
-1. Log in [Azure DevOps](http://dev.azure.com)
+1. Enter in [Azure DevOps](http://dev.azure.com) and log in clicking in **Start free** button
 
 ![](images/1.png)
 
-2. Set the name you want
+2. Set the **Project name** you want
 3. In **visibility** select **Private**
 4. Click on **Advanced**, in **Version control** select **GIT** and **Work item process** select Scrum then click on **+ Create project** 
 
@@ -179,7 +179,7 @@
 
 ### Task 6: Set your variables
 1. Click on **Variables** tab
-2. Create this variables clicking on **+ Add** button
+2. Create these variables clicking on **+ Add** button
 
 Name: **BuildConfiguration** Value: **Release** check the _settable at queue time_
 Name: **BuildPlatform** Value: **Any CPU**
@@ -248,7 +248,7 @@ Name: **BuildPlatform** Value: **Any CPU**
 
 ![](images/45.png)
 7. Select your **Azure SQL DacpacTask**
-8. Put `Execute Azure SQL: DacpacTask` as the **Display name**
+8. Put `Execute Azure SQL : DacpacTask` as the **Display name**
 9. Select your **ServiceConnection** on **Azure Subscription**
 10. Set `$(SQLserver)` on **Azure SQL Server** input
 11. Set `$(DatabaseName)` on **Database** input
