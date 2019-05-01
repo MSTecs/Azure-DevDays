@@ -52,7 +52,7 @@ In this task, you will create a firewall rule to allow access to your SQL Server
 
 5. On the Success dialog box, select OK
 
-##Task 3: Migrate the on-premises SQL database to Azure
+## Task 3: Migrate the on-premises SQL database to Azure
 In this task, you are going to create the AdventureTest database and migrate it from on-premises (Lab VM) into Azure SQL Database
 
 1. On Azure Portal, From the Left menu, go to Virtual Machines.
@@ -71,8 +71,8 @@ In this task, you are going to create the AdventureTest database and migrate it 
    
 ![](images/13.png)
 
-6. Go to your downloads folder and double click on MySQLVM.rdp File, click on Connect, enter student as the user name and Pa55w.rd1234 as Password, and click on Accept. Then click on Yes.
-7. Click on Start Button and type Management, from the results click on SQL Management Studio 17,and then click connect.
+6. Go to your downloads folder and double click on MySQLVM.rdp File, click on Connect, enter student as the username and Pa55w.rd1234 as Password, and click on Accept. Then click on Yes.
+7. Click on Start Button and type Management, from the results click on SQL Management Studio 17, and then click connect.
 8. Click on New Query
 
 ![](images/newquery.png)
@@ -237,7 +237,7 @@ In this task, you will provision a Web App and API App in Azure.
 
 You are now ready to use Azure Active Directory for authentication in your App Service app.
 
-### Task 2: Test the protection.
+## Task 2: Test the protection.
 1. From the App Services Blade, click on Overview.
 2. Under URL on the dashboard click on the link to test the Authentication you just Enabled.
 3. Sign in with the azure account provided for this lab
