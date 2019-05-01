@@ -25,8 +25,8 @@
 	- Subscription: Select the subscription you are using for this lab.
 	- Version: Select the default version
 	- Resource group: Select the Module-03-XXXXX resource group, where XXXXX is the number generated for this lab
-	- Kubernetes cluster name: Enter a custer name, for example myAKScluster
-	- DNS name prefix: This field its filled automatically when typing the cluster name, if not, set a DNS name prefix, for example myAKScluster-dns
+	- Kubernetes cluster name: Enter a cluster name, for example myAKScluster
+	- DNS name prefix: This field its automatically filled when typing the cluster name, if not, set a DNS name prefix, for example myAKScluster-dns
 
 ![](images/2.png)
 
@@ -50,7 +50,7 @@
 
 ![](images/6.png)
 
-##task 2: Connect to the cluster
+## Task 2: Connect to the cluster
 1. Click on the marked to open Cloud Shell
    
 ![](images/7.png)
@@ -195,7 +195,7 @@ kubectl get service azure-vote-front --watch
 
 2. When the **EXTERNAL-IP** address changes from pending to an actual public IP address, use ``CTRL+C`` to stop the **kubectl** watch process
    
-3. Open a new tab on you browser, enter your external-IP, and you'll see your service running
+3. Open a new tab on your browser, enter your external-IP, and you'll see your service running
 
 ![](images/15.png)
 **note** your application is now online
