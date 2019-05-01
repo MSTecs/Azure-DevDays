@@ -71,7 +71,7 @@ In this task, you are going to create the AdventureTest database and migrate it 
    
 ![](images/13.png)
 
-6. Go to your downloads folder and double click on MySQLVM.rdp File, click on Connect, enter student as the username and Pa55w.rd1234 as Password, and click on Accept. Then click on Yes.
+6. Go to your downloads folder and double click on MySQLVM.rdp File, click on Connect, enter student as the username and Pa55.wrd1234 as Password, and click on Accept. Then click on Yes.
 7. Click on Start Button and type Management, from the results click on SQL Management Studio 17, and then click connect.
 8. Click on New Query
 
