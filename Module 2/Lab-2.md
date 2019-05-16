@@ -38,17 +38,36 @@
 5. Wait for the deployment to be completed.
    
 ## Task 2: Create a new azure VM running Docker
-1. In the azure portal, from the cloud shell, Deploy a template that will create a new Azure VM hosting Docker by typing the following command and pressing Enter, change the XXXXXX on the resource group to match with the number obtained from the lab environment, which will be on your credentials between odl_user_ and @:
+1. In the azure portal, from the cloud shell, type the  following command which creates an SSH key pair using RSA encryption and a bit length of 2048:
+```
+ssh-keygen -t rsa -b 2048
+```
+2. The terminal request the following values
+```
+ + Enter file in which to save the key (/home/demo/.ssh/id_rsa): Press enter to accept the default location
+ + Enter passphrase (empty for no passphrase): Pa55word234234
+ + Enter same passphrase again:Pa55word234234
+```
+
+3. Display your public key with the following command:
+```
+cat ~/.ssh/id_rsa.pub
+```
+4. Copy the displayed public key
+
+![](images/ssh.png)
+
+5. Deploy a template that will create a new Azure VM hosting Docker by typing the following command and pressing Enter, change the XXXXXX on the resource group to match with the number obtained from the lab environment, which will be on your credentials between odl_user_ and @:
 ```
 az group deployment create --resource-group Module-02-XXXXX --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/docker-simple-on-ubuntu/azuredeploy.json
 ```
-2. The terminal request the following values 
+6. The terminal request the following values 
 ```
     + adminUsername: student
-    + adminPassword: Pa55word234234
     + dnsNameForPublicIP: any valid, unique name consisting of lowercase letters and digits
+    + adminPasswordOrKey: paste the public key obtained from step 4, and press enter
 ```
-3. Wait for the deployment to be completed.
+7. Wait for the deployment to be completed.
 
 ## Exercise 2: Deploying containers to Azure VMs
 ## Task 1: Connect to an Azure VM running Docker
