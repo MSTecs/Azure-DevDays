@@ -42,7 +42,7 @@
 ```
 ssh-keygen -t rsa -b 2048
 ```
-2. The terminal request the following values
+2. The terminal requests the following values
 ```
  + Enter file in which to save the key (/home/demo/.ssh/id_rsa): Press enter to accept the default location
  + Enter passphrase (empty for no passphrase): Pa55word234234
@@ -61,7 +61,7 @@ cat ~/.ssh/id_rsa.pub
 ```
 az group deployment create --resource-group Module-02-XXXXX --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/docker-simple-on-ubuntu/azuredeploy.json
 ```
-6. The terminal request the following values 
+6. The terminal requests the following values 
 ```
     + adminUsername: student
     + dnsNameForPublicIP: any valid, unique name consisting of lowercase letters and digits
