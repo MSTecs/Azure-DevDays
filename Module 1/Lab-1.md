@@ -145,29 +145,32 @@ In this task, you will provision a Web App and API App in Azure.
 
 2. Select Create on the Web App blade.
 3. On the Web App Create blade, specify the following configuration:
--   a. App name: Enter a unique and valid URL, such as myfirstappXXX Where you must change the values for XXX (until the green check mark appears) in the App Name field.
--   b. Subscription: Select the subscription you are using for this lab.
--   c. Resource group: Select Use existing and select the resource group provided for this Module 1 lab.
+  
+-   a. Subscription: Select the subscription you are using for this lab.
+-   b. Resource group: Select Use existing and select the resource group provided for this Module 1 lab.
+-   c. Name: Enter a unique and valid URL, such as myfirstappXXX Where you must change the values for XXX (until the green check mark appears) in the App Name field.
+-   d. Publish: Select Code.
+-   e. Runtime stack: Select ASP.NET V4.7.
+-   f. Operating System: Windows will be selected because of the runtime stack you selected.
+-   g. Region: Choose the nearest region to where you are doing this lab.
    
-![](images/37.png)
+![](images/image101.png)
 
--   d. Select App Service plan/Location.
--   e. On the App Service plan blade, select Create new.
+-   h. Plan: Leave the default setting, note that if you dont have an App Service Plan it will be created
+-   i. Sku and size: Ensure that Standard S1 is selected
    
-![](images/38.png)
+![](images/image102.png)
 
--   f. On the New App Service Plan blade, enter the following:
--   App Service plan: Enter a unique name.
+4. You can click on Change size under Sku and size and review the details of every size offered, after that, click on the Production tier, select S1 and then click on Apply
    
-![](images/39.png)
+![](images/image103.png)
 
--   Location: Select the location you are using for this hands-on lab.
--   Pricing tier: Select S1 Standard.
+5. Click on Next: Monitoring at the bottom of the page.
+6. Disable the Application Insights
    
-![](images/40.png)
+![](images/image104.png)
 
-4. Select OK.
-5. Select Create to provision the new Web App.
+7. Select Review and create at the bottom of the page, and then click on Create
 
 ## Task 2: Provision an API App
 1. In the Azure portal http://portal.azure.com, select +Create a resource, enter "api app" in the Marketplace Search box, hit enter, and select API App from the results.
@@ -180,8 +183,9 @@ In this task, you will provision a Web App and API App in Azure.
 -   b. Subscription: Select the subscription you are using for this hands-on lab.
 -   c. Resource group: Choose Use existing and select the resource group provided for this Module 1 lab.
 -   d. App Service plan/Location: Select the plan you created for the Web App.
+-   e. Application Insights: Click on it, Select Disable and then click on Apply
    
-![](images/42.png)
+![](images/image105.png)
 
 4. Select Create.
 
@@ -201,19 +205,23 @@ In this task, you will provision a Web App and API App in Azure.
 
 ## Task 2: Add the connection string to your Web App
 
-1.- On the Azure Portal from the left menu, click on App Services, and then click on the App you just created on Exercise 2
+1. On the Azure Portal from the left menu, click on App Services, and then click on the App you just created on Exercise 2
 
 ![](images/app.png)
 
-2.- On the Web App blade, under settings click on Application Settings, scroll down to find the connections strings section and click on +Add new connection string
+2. On the Web App blade, under settings click on Configuration, on the Connection Strings section click on + New connection string
 
-![](images/appsettings.png)
+![](images/image106.png)
 
-3.- On Connection String Name Type democs, on Value paste the connection string that you obtained on the past task, change the values from username and password with demouser and Password.1!!, Ensure that SQLAzure is selected on Type dropdown text, then click on Save at the top of the workspace
+3. On Connection String Name Type democs, on Value paste the connection string that you obtained on the past task, change the values from username and password with demouser and Password.1!!, On Type, select SQLAzure, then click on update at the bottom of the blade
 
-![](images/appcs.png)
+![](images/image107.png)
 
-4.- NOTE: You can name the connection strings to match with the connection strings you use on your code.
+4. NOTE: You can name the connection strings to match with the connection strings you use on your code.
+
+5. On the Configuration Blade, click on Save
+
+![](images/image108.png)
 
 ## Exercise 4: Identity and security
 
