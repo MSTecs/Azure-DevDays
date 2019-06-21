@@ -172,23 +172,6 @@ In this task, you will provision a Web App and API App in Azure.
 
 7. Select Review and create at the bottom of the page, and then click on Create
 
-## Task 2: Provision an API App
-1. In the Azure portal http://portal.azure.com, select +Create a resource, enter "api app" in the Marketplace Search box, hit enter, and select API App from the results.
-   
-![](images/41.png)
-
-2. Select Create on the API App blade.
-3. On the API App Create blade, enter the following:
--   a. App name: Enter a unique name, such as mynewapiXXX. Where you must change the values for XXX, (ensure the green checkmark appears).
--   b. Subscription: Select the subscription you are using for this hands-on lab.
--   c. Resource group: Choose Use existing and select the resource group provided for this Module 1 lab.
--   d. App Service plan/Location: Select the plan you created for the Web App.
--   e. Application Insights: Click on it, Select Disable and then click on Apply
-   
-![](images/image105.png)
-
-4. Select Create.
-
 ## Exercise 3: Connect your App with the Azure SQL Database
 
 ## Task 1: Get the connection String
