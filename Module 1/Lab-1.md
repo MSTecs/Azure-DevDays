@@ -137,7 +137,7 @@ GO
 
 ## Exercise 2: Provision App Services
 ## Task 1: Create a Web App
-In this task, you will provision a Web App and API App in Azure.
+In this task, you will provision a Web App in Azure.
 
 1. In the Azure portal http://portal.azure.com, create a new Web App by selecting +Create a resource, type "web app" in the Marketplace search box, hit enter, and select the Web App item in the results.
    
